@@ -1,29 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
     color: white;
-    font-family: "Playwrite HR", cursive;
-    font-size: 1rem;
+    font-family:  'Helvetica', 'Arial Narrow', sans-serif;
 }
 
 body {
-    background-image: url("ds-02.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-color: #333;
+    background-image: linear-gradient(
+        55deg, 
+        blue, 
+        green);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+body > h2 {
+    padding: 0.5rem;
 }
 
 header {
-    flex: 0 0 10vh;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
+    min-height: 10vh;
+    gap: 0.5rem;
     background-color: rgb(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(50px);
@@ -31,29 +37,58 @@ header {
     box-shadow: 0 0px 80px 0 rgba(85, 127, 173, 0.3);
 }
 
+h1, nav {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
 header > nav > ul {
-    list-style: none;
     display: flex;
-    gap: 30px;
+    justify-content: space-evenly;
 }
 
 img {
-    height: 2rem;
-    width: 2rem;
+    height: 32px;
+    width: 32px;
 }
 
 main {
     display: flex;
-    flex: 1;
-    align-items: start;
-    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    min-height: 90vh;
+}
+
+main > img, h2 {
+    flex: 1 1 300px;
+    width: 100%;
+    align-content: center;
+}
+
+.conhecimento {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.conhecimento > nav {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.conhecimento-java, .conhecimento-node {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.conhecimento-java > li, .conhecimento-node > li {
+    flex: 1 1 100px;
+    align-content: center;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 0 0 10vh;
+    min-height: 10vh;
     background-color: rgb(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(50px);
@@ -64,9 +99,15 @@ footer {
     );
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0px 80px 0 rgba(85, 127, 173, 0.3);
-    padding: 1rem;
 }
 
-footer > div > p {
-    font-size: 0.7rem;
+footer > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 100px;
+    padding: 0.5rem;
+}
+
+footer > h6 {
+    padding: 0.5rem;
 }
